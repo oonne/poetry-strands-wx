@@ -1,0 +1,11 @@
+page {
+  /* 主题色 */
+  --color-primary: #da3a09; 
+
+  /* 文字 */
+  --color-text: #221805;
+  /* 连线中的颜色 */
+  --connecting-color: rgb(244, 186, 116);
+  /* 完成连线的颜色 */
+  --completed-color: rgb(220, 91, 4);
+}

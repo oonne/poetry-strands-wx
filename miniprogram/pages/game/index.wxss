@@ -1,0 +1,143 @@
+.title{
+  padding: 12rpx 36rpx;
+}
+.name{
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #333;
+}
+.author{
+  font-size: 32rpx;
+  color: #999;
+}
+
+/* 游戏核心区 */
+.game-wrapper{
+  margin: 24rpx auto;
+  width: 600rpx;
+  min-height: 480rpx;
+  padding: 20rpx;
+  border: 10rpx solid #dbb077;
+  background-color: #f9f9f9;
+}
+.game-container {
+  position: relative;
+}
+
+.char-cell{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.char-item{
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #333;
+  transition: all 0.3s ease;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.connecting{
+  background-color: var(--connecting-color);
+}
+
+.completed{
+  background-color: var(--completed-color);
+  color: #fff;
+}
+
+/* 抖动动画 */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20%, 60% {
+    transform: translateX(-5rpx);
+  }
+  40%, 80% {
+    transform: translateX(5rpx);
+  }
+}
+
+.shake-animation {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* 添加连线样式 */
+.connection-line {
+  position: absolute;
+  height: 12rpx;
+  background-color: var(--connecting-color);
+  border-radius: 3rpx;
+  z-index: -1;
+}
+
+.completed-line {
+  background-color: var(--completed-color);
+  height: 16rpx;
+}
+
+.cursor-line {
+  position: absolute;
+  height: 12rpx;
+  background-color: var(--connecting-color);
+  border-radius: 3rpx;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+/* 进度条和计时器样式 */
+.progress-timer-container {
+  width: 640rpx;
+  margin: auto;
+  margin-top: 32rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timer {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: var(--color-text);
+  min-width: 100rpx;
+  text-align: center;
+  margin-right: 20rpx;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 16rpx;
+  background-color: #e0e0e0;
+  border-radius: 8rpx;
+  overflow: hidden;
+  margin-right: 16rpx;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--completed-color);
+  border-radius: 8rpx;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: var(--color-text);
+}

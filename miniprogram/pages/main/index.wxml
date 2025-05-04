@@ -1,0 +1,16 @@
+<safe-top />
+
+<!-- 标题 -->
+<text class="title">
+  诗词串串
+</text>
+
+<!-- demo -->
+<view class="demo">
+    <text>DEMO</text>
+</view>
+
+<!-- 操作按钮 -->
+<view class="button" bindtap="startGame">快速开始</view>
+<view class="button" bindtap="toPage" data-page="/pages/poetry-list/index">诗词列表</view>
+<view class="button" bindtap="toPage" data-page="/pages/setting/index">设置</view>

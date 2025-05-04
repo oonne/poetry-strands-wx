@@ -1,0 +1,108 @@
+body {
+  font-family: 'Microsoft YaHei';
+}
+
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.main {
+  margin: 0 auto;
+  padding: 30px 100px;
+}
+
+.project {
+  font-size: 20px;
+  text-align: center;
+}
+
+.iconlist {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.industry-name {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.iconlist-item-wrapper {
+  margin: 7px;
+}
+
+.iconlist-item {
+  box-sizing: border-box;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.iconlist-item.brief {
+  width: 226px;
+  height: 66px;
+}
+
+.iconlist-item-view {
+  display: flex;
+  align-items: center;
+  background: white;
+}
+
+.iconlist-item-view-left {
+  display: flex;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+}
+
+.iconlist-item-view-left-icon {
+  color: #db6923;
+  font-size: 48px;
+}
+
+.iconlist-item-view-right {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 160px;
+  height: 42px;
+}
+
+.iconlist-item-view-right .iconlist-item-view-text.title.ellipsis {
+  width: 112px;
+  overflow: hidden;
+  color: var(--card-color);
+  font-size: 14px;
+  line-height: 22px;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.iconlist-item-view-right .iconlist-item-view-text.name {
+  cursor: pointer;
+  overflow: hidden;
+  color: #999;
+  font-size: 12px;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,40 @@
+/* 向上实心三角形 */
+.triangle-up {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 10rpx solid transparent;
+  border-right: 10rpx solid transparent;
+  border-bottom: 15rpx solid #000;
+}
+
+/* 向下实心三角形 */
+.triangle-down {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 10rpx solid transparent;
+  border-right: 10rpx solid transparent;
+  border-top: 15rpx solid #000;
+}
+
+/* 关闭按钮 */
+.close-icon {
+  display: inline-block;
+  width: 48rpx;
+  height: 4rpx;
+  background: #999;
+  line-height: 0;
+  font-size: 0;
+  vertical-align: middle;
+  transform: rotate(45deg);
+}
+
+.close-icon:after {
+  content: ' ';
+  display: block;
+  width: 48rpx;
+  height: 4rpx;
+  background: #999;
+  transform: rotate(-90deg);
+}

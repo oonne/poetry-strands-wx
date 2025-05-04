@@ -1,0 +1,76 @@
+<safe-top />
+
+<scroll-view scroll-y style="height: 100%;">
+  <!-- 诗名/作者 -->
+  <view class="title" style="width: {{menuButtonLeft - 18}}px;">
+    <text class="name">{{name}}</text>
+    <text class="author">{{author}}({{dynasty}})</text>
+  </view>
+
+  <!-- 游戏核心区 -->
+  <view 
+      class="game-wrapper"
+      catch:touchend="handleTouchEnd"
+      catch:touchcancel="handleTouchEnd"
+  >
+    <view 
+      class="game-container {{shakeAnimation ? 'shake-animation' : ''}}"
+      style="height: {{charCellSize * totalRows}}rpx; width: {{charCellSize * totalCols}}rpx;"
+    >
+      <!-- 已完成连线元素 -->
+      <view 
+        wx:for="{{completedLines}}" 
+        wx:key="index" 
+        class="connection-line completed-line"
+        style="left: {{item.x1}}rpx; top: {{item.y1}}rpx; width: {{item.length}}rpx; transform: rotate({{item.angle}}deg); transform-origin: 0 50%;"
+      ></view>
+      
+      <!-- 连线元素 -->
+      <view 
+        wx:for="{{lines}}" 
+        wx:key="index" 
+        class="connection-line"
+        style="left: {{item.x1}}rpx; top: {{item.y1}}rpx; width: {{item.length}}rpx; transform: rotate({{item.angle}}deg); transform-origin: 0 50%;"
+      ></view>
+      
+      <!-- 当前光标连线 -->
+      <view 
+        wx:if="{{cursorLine.show}}"
+        class="cursor-line"
+        style="left: {{cursorLine.x1}}rpx; top: {{cursorLine.y1}}rpx; width: {{cursorLine.length}}rpx; transform: rotate({{cursorLine.angle}}deg); transform-origin: 0 50%;"
+      ></view>
+      
+      <view
+        wx:for="{{charList}}"
+        wx:for-item="cell"
+        wx:key="id"
+        class="char-cell"
+        style="width: {{charCellSize}}rpx; height: {{charCellSize}}rpx; top: {{cell.rowIndex * charCellSize}}rpx; left: {{cell.colIndex * charCellSize}}rpx;"
+      >
+        <view 
+          catch:touchstart="handleTouchStart"
+          catch:touchmove="handleTouchMove"
+          data-id="{{cell.id}}"
+          class="char-item {{cell.isConnecting ? 'connecting' : ''}} {{cell.isCompleted ? 'completed' : ''}}"
+        >{{cell.char}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 进度条/计时器 -->
+  <view class="progress-timer-container">
+    <view class="timer">{{gameTime}}</view>
+    <view class="progress-container">
+      <view class="progress-bar">
+        <view class="progress-fill" style="width: {{(currentLineIndex / content.length) * 100}}%"></view>
+      </view>
+      <view class="progress-text">{{currentLineIndex}}/{{content.length}}</view>
+    </view>
+  </view>
+
+  <!-- 提示 -->
+  <!-- 分享 -->
+  <!-- 重新开始 -->
+  <!-- 排行榜 -->
+  <!-- 换一首 -->
+</scroll-view>

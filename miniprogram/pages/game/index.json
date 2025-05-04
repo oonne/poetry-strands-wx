@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "safe-top": "/components/safe-top/index"
+  },
+  "disableScroll": false
+}

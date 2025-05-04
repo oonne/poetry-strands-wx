@@ -1,0 +1,2 @@
+<text class="mp-iconfont icon-{{name}}" style="font-size:{{size}};color:{{color}};{{bold?'font-weight:bold;':''}};{{iconStyle}}" />
+

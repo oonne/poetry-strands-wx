@@ -1,0 +1,28 @@
+{
+  "name": "poetry-strands",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "svg2iconfont": "node scripts/svg2iconfont/index",
+    "gen-poetry-list": "tsx scripts/generate-poetry-list.ts"
+  },
+  "keywords": [],
+  "author": "JAY",
+  "license": "ISC",
+  "dependencies": {
+    "font-carrier": "^0.3.1",
+    "oslllo-svg-fixer": "^5.0.0",
+    "rd": "^2.0.1",
+    "svgo": "^3.3.2",
+    "tsx": "^4.19.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "miniprogram-api-typings": "^2.8.3-1"
+  },
+  "packageManager": "pnpm@9.1.0",
+  "engines": {
+    "node": ">=20.4.0",
+    "pnpm": ">=8.6.7"
+  }
+}
